@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Rob Cameron"]
   s.email       = ["cannikinn@gmail.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Tells Rails 3 to try and fallback to :html if the given format's template is not found}
+  s.description = %q{When you're developing something like a mobile site and you're creating new views you may not always have a mobile version of your view available. This gem will tell Rails to attempt to load the standard HTML template if your special format isn't available.}
 
   s.rubyforge_project = "format_fallback"
 
