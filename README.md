@@ -31,3 +31,10 @@ Rails is generally trying to help you by telling you that a given template is mi
 know you have to go in and add one. Which means if you're working on some new `:csv` versions of your
 pages but forget to add one, and there is a requisite `:html` version, Rails will now serve the `:html`
 version automatically. Someone would probably find this in testing, but it's something to be aware of.
+
+## Compatability
+
+Right now this gem is locked to Rails > 3.0.0 but < 3.1.0 I'm using Rails 3.0.10 locally and haven't
+tested against Rails 3.1 yet. I assume that the template lookup code for Rails probably isn't going
+to change any time soon, but I locked in these versions just in case. If you use this gem, and use it
+on 3.1.x and it works fine, let me know and I'll update the dependency in the Gemfile.
