@@ -22,3 +22,12 @@ switch formats to `.html` and try to get that instead. Then, if `.html` isn't fo
 not `.html`).
 
 Enjoy!
+
+## Caveats
+
+Format Fallback doesn't currently let you provide any options to say, for example, "only fall back
+to `:html` if `:mobile` isn't found." It will attempt to fall back for *any* template that isn't found.
+Rails is generally trying to help you by telling you that a given template is missing so that you 
+know you have to go in and add one. Which means if you're working on some new `:csv` versions of your
+pages but forget to add one, and there is a requisite `:html` version, Rails will now serve the `:html`
+version automatically. Someone would probably find this in testing, but it's something to be aware of.
