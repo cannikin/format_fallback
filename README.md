@@ -1,7 +1,7 @@
 ## The Problem
 
 Let's say you're going to start building a mobile version of your site. You use something like
-"mobile fu":https://github.com/brendanlim/mobile-fu which gives you a new format, `:mobile`, which
+[mobile fu](https://github.com/brendanlim/mobile-fu) which gives you a new format, `:mobile`, which
 is automatically set if a request comes in from a mobile device.
 
 All you need to do to start serving your mobile pages is to create a `.mobile` version of your views:
