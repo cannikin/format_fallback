@@ -15,4 +15,18 @@ module ActionView
     alias_method_chain :find, :default_template
 
   end
+  
+  class Resolver
+    
+    def cached(key, prefix, name, partial)
+      return yield unless key && caching?
+      cache_content = yield
+      if cache_content.empty?
+        []
+      else
+        @cached[key][prefix][name][partial] ||= cache_content
+      end
+    end
+    
+  end
 end
