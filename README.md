@@ -1,3 +1,25 @@
+## (Update) Rails 4.1 Support
+
+Take a look at [Action Pack Variants](http://edgeguides.rubyonrails.org/4_1_release_notes.html#action-pack-variants)
+feature built into Rails 4.1. This gives you the familiar `respond_to` block but for different clients:
+
+```ruby
+respond_to do |format|
+  format.html do |html|
+    html.tablet # renders app/views/projects/show.html+tablet.erb
+    html.phone { extra_setup; render ... }
+  end
+end
+```
+
+And your views get named something like:
+
+    app/views/projects/show.html.erb
+    app/views/projects/show.html+tablet.erb
+    app/views/projects/show.html+phone.erb
+    
+If that doesn't help, then read on...
+
 ## The Problem
 
 Let's say you're going to start building a mobile version of your site. You use something like
